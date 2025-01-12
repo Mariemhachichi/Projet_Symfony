@@ -1,11 +1,15 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New Enseignant{% endblock %}
+{% block title %}Créer un nouvel Enseignant{% endblock %}
 
 {% block body %}
-    <h1>Create new Enseignant</h1>
+<div class="container mt-4">
+    <h1 class="mb-4">Créer un nouvel Enseignant</h1>
 
-    {{ include('enseignant/_form.html.twig') }}
+    <div class="card shadow-sm p-4">
+        {{ include('enseignant/_form.html.twig') }}
+    </div>
 
-    <a href="{{ path('app_enseignant_index') }}">back to list</a>
+    <a href="{{ path('app_enseignant_index') }}" class="btn btn-secondary mt-3">Retour à la liste</a>
+</div>
 {% endblock %}
